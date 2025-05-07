@@ -50,8 +50,8 @@ prompt = PromptTemplate(template=custom_prompt_template, input_variables=['conte
 
 pipe = pipeline(
     "question-answering",
-    model="deepset/roberta-base-squad2",  # This is a good model for QA
-    device=-1  # Use CPU. Change to 0 if you have a GPU
+    model="distilbert-base-uncased-distilled-squad",  
+    device=-1  
 )
 llm = HuggingFacePipeline(pipeline=pipe)
 
